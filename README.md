@@ -9,7 +9,9 @@
 
 Create a new environment
 ```
-conda create -v venv python==3.9 -y
+conda create --name development
+conda activate development
+conda create -p venv python==3.9 -y
 ```
 
 Activate the environment
@@ -43,5 +45,13 @@ git config --global user.email "<your email>"
 git config --global user.email
 ```
 
+### Git
 ```
-git add req
+git add .
+git commit -m "<comment>"
+git push origin main
+```
+
+
+### Flask
+python app.py
