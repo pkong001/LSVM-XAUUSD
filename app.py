@@ -25,5 +25,15 @@ def predict_api():
     output = int(output[0])
     return jsonify(output)
 
+# Create a route api for website
+@app.route('/predict', methods=['POST'])
+def predict():
+    data=[float(x) for x in request.form.values()]
+    final_input = scaler.transform(np.array(data).reshape(1,-1))
+    print(final_input)
+    output = svm_model.predict(final_input)[0]
+    # return prediction_text ( place holder )
+    return render_template("home.html",prediction_text = "The prediction is {}   >>> 1 = LongTrade | 0 = No Trade".format(output))
+
 if __name__=="__main__":
     app.run(debug=True)
