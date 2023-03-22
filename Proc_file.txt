@@ -1,0 +1,3 @@
+Profile tell the app which code to run when start, and which code to run when app get stuck.
+
+gunicorn create multiple python web processors.

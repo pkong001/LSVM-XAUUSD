@@ -1,0 +1,7 @@
+Create app
+build Docker file >>> copy app and setting
+Create .github/workflows/main.yaml to put docker in as a container, This is CI/CD pipeline
+
+
+in main.yaml
+key is from github action(repository>>setting>>secret>>action>>new repository secret) named HEROKU_API_KEY which is a key copied from the Heroku it self, this also apply to email

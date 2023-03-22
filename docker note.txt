@@ -1,0 +1,19 @@
+# install all python dependencies, using standard linux image in docker, so every pc will work the same way
+FROM python:3.9 
+
+# Copy everything in our folder to /app
+COPY . /app
+
+#create a working directory called /app
+WORKDIR /app
+
+# install our requirements.txt (required libaries)
+RUN pip install -r requirements.txt
+
+# Expose a port to allow access to this container, the server will automatically assign a port to this container
+EXPOSE $PORT
+
+# Run the command, in this case gunicorn, to help run in heruko cloud
+# workers=4 like the assign the cpu to run seperately when multiple request is coming
+# --bind , bind the port in heruko
+CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
