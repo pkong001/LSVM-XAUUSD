@@ -1,3 +1,11 @@
+# My ignore
+lsvm_combine_test.ipynb
+record_capital.csv
+record_capital.xlsx
+sim_df.csv
+sim_df.xlsx
+~$sim_df.xlsx
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,3 +135,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
