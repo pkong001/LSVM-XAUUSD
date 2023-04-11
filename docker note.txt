@@ -15,5 +15,6 @@ EXPOSE $PORT
 
 # Run the command, in this case gunicorn, to help run in heruko cloud
 # workers=4 like the assign the cpu to run seperately when multiple request is coming
-# --bind , bind the port in heruko
+# --bind , bind the port in heruko, which heruko assigned to the container
+# 0.0.0.0 = what ever port heruko assigned
 CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
