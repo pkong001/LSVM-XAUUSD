@@ -6,6 +6,7 @@ sim_df.csv
 sim_df.xlsx
 ~$sim_df.xlsx
 account_credentials.py
+.tmp.driveupload/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
