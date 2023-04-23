@@ -4,3 +4,5 @@ numpy
 matplotlib
 scikit-learn
 gunicorn
+panda_ta
+xgboost
